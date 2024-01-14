@@ -16,8 +16,8 @@ Comment.belongsTo(Blog,{constraints:true, onDelete:'CASCADE'});
 Blog.hasMany(Comment);
 
 
-sequelize.sync({force:true})
-// sequelize.sync()
+// sequelize.sync({force:true})
+sequelize.sync()
 .then(result=>{
     //console.log(result);
     app.listen(5000);
